@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">GenelKulturYarismasi</string>
+    <string name="second_activity">Second Activity</string>
+    <string name="name">Emirhan Soylu</string>
+    <string name="gold">1000</string>
     <string name="facebook_app_id">271291920382200</string>
     <string name="fb_login_protocol_scheme">fb271291920382200</string>
     <string name="Logged_in">"You're logged in</string>

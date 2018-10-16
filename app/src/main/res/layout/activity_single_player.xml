@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SinglePlayerActivity">
+    tools:context=".SinglePlayerActivity"
+    android:background="@drawable/single_player_activity_background">
 
 </android.support.constraint.ConstraintLayout>
