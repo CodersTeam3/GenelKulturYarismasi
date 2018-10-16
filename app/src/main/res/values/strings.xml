@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">GenelKulturYarismasi</string>
+    <string name="facebook_app_id">271291920382200</string>
+    <string name="fb_login_protocol_scheme">fb271291920382200</string>
+    <string name="Logged_in">"You're logged in</string>
+    <string name="Failedauth">"Authentication failed</string>
+    <string name="userproperties">properties</string>
 </resources>

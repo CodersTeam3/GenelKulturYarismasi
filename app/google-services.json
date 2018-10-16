@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1027952313332",
+    "firebase_url": "https://genelkulturyarismasi.firebaseio.com",
+    "project_id": "genelkulturyarismasi",
+    "storage_bucket": "genelkulturyarismasi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1027952313332:android:b0a4d3d7146ec952",
+        "android_client_info": {
+          "package_name": "com.app.codersteam.genelkulturyarismasi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1027952313332-a6b84uraoimugrvj1f01cdl0ge8n5bu0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.codersteam.genelkulturyarismasi",
+            "certificate_hash": "08f32ee5208c0778151a65ba648e9d16e647ac5f"
+          }
+        },
+        {
+          "client_id": "1027952313332-7r1qbnhvd8lqspim8079deb3jspsr9k7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNlg_ijLQGtFQlpaH6DfcCjkv1gS7hxiE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1027952313332-7r1qbnhvd8lqspim8079deb3jspsr9k7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
