@@ -10,7 +10,7 @@ class SinglePlayerActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_single_player)
 
-        val v = window
-        v.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+        val window = window
+        window.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
     }
 }
