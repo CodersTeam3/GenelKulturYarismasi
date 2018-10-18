@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "1027952313332-1dnujcrjdscpjp5cnmt4120bshq5kmh6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.codersteam.genelkulturyarismasi",
+            "certificate_hash": "857a6a6aa7dc2fc8e9b474848bde9b5cceaf7b0e"
+          }
+        },
+        {
           "client_id": "1027952313332-7r1qbnhvd8lqspim8079deb3jspsr9k7.apps.googleusercontent.com",
           "client_type": 3
         }

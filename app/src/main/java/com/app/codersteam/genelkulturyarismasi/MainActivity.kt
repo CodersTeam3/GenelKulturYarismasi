@@ -13,7 +13,6 @@ class MainActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        println("Hello World")
         button.setOnClickListener(View.OnClickListener {
             var intent = Intent(applicationContext,SinglePlayerActivity::class.java)
             startActivity(intent)

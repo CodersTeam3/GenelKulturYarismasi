@@ -8,6 +8,7 @@
     tools:context=".SinglePlayerActivity"
     android:background="@drawable/single_player_activity_background">
 
+
     <android.support.v7.widget.CardView
         android:id="@+id/imageView"
         android:layout_width="250dp"
