@@ -45,25 +45,29 @@
         <Button
             android:id="@+id/btn_answer1"
             android:layout_width="@dimen/activity_single_player_button_width"
-            android:layout_height="@dimen/activity_single_player_button_height" />
+            android:layout_height="@dimen/activity_single_player_button_height"
+            android:onClick="activitySpButtonPressed" />
 
         <Button
             android:id="@+id/btn_answer2"
             android:layout_width="@dimen/activity_single_player_button_width"
             android:layout_height="@dimen/activity_single_player_button_height"
-            android:layout_marginTop="@dimen/activity_single_player_button_margin_top" />
+            android:layout_marginTop="@dimen/activity_single_player_button_margin_top"
+            android:onClick="activitySpButtonPressed" />
 
         <Button
             android:id="@+id/btn_answer3"
             android:layout_width="@dimen/activity_single_player_button_width"
             android:layout_height="@dimen/activity_single_player_button_height"
-            android:layout_marginTop="@dimen/activity_single_player_button_margin_top" />
+            android:layout_marginTop="@dimen/activity_single_player_button_margin_top"
+            android:onClick="activitySpButtonPressed" />
 
         <Button
             android:id="@+id/btn_answer4"
             android:layout_width="@dimen/activity_single_player_button_width"
             android:layout_height="@dimen/activity_single_player_button_height"
-            android:layout_marginTop="@dimen/activity_single_player_button_margin_top" />
+            android:layout_marginTop="@dimen/activity_single_player_button_margin_top"
+            android:onClick="activitySpButtonPressed" />
 
     </LinearLayout>
 
