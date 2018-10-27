@@ -25,11 +25,11 @@ class MainActivity : Activity() {
     fun buttonPressed(it:View){
         it as Button
         when(it.id){
-            singlePlayerButton.id-> {
-                var intent = Intent(applicationContext,SinglePlayerActivity::class.java)
+            btn_singlePlayer.id-> {
+                val intent = Intent(applicationContext,SinglePlayerActivity::class.java)
                 startActivity(intent) }
 
-            multiPlayerButton.id-> {Intent(applicationContext,SinglePlayerActivity::class.java)
+            btn_multiPlayer.id-> {Intent(applicationContext,SinglePlayerActivity::class.java)
                 startActivity(intent) }
 
             else->{

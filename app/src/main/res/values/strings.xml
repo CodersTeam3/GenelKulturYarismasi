@@ -3,6 +3,11 @@
     <string name="second_activity">Second Activity</string>
     <string name="name">Emirhan Soylu</string>
     <string name="gold">1000</string>
+    <string name="gold_desc">gold</string>
+    <string name="single_player_activity_question_desc">question</string>
+    <string name="single_player_activity_skill_user_desc">user</string>
+    <string name="single_player_activity_skill_time_desc">time</string>
+    <string name="single_player_activity_skill_half_desc">half</string>
     <string name="facebook_app_id">271291920382200</string>
     <string name="fb_login_protocol_scheme">fb271291920382200</string>
     <string name="Logged_in">"You're logged in</string>
