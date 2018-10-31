@@ -3,12 +3,16 @@ package com.app.codersteam.genelkulturyarismasi
 import android.app.Activity
 import android.graphics.drawable.AnimatedVectorDrawable
 import android.os.Bundle
+import android.os.Handler
 import android.view.View
 import android.view.WindowManager
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_single_player.*
 
 class SinglePlayerActivity : Activity() {
 
+    var handler = Handler()
+    var runnable = Runnable { }
     var skillUsed = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,6 +21,24 @@ class SinglePlayerActivity : Activity() {
 
         val window = window
         window.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+
+        runnable = object : Runnable{
+            override fun run() {
+                handler.postDelayed(runnable, 25)
+                if(pb_time.progress < 100f)
+                    pb_time.progress += 0.5f
+                else {  //Sure bitti
+                    handler.removeCallbacks(runnable)
+                    Toast.makeText(applicationContext,"Bitti",Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+        runnable.run()
+    }
+
+    override fun onBackPressed() {
+        handler.removeCallbacks(runnable)
+        super.onBackPressed()
     }
 
     fun activitySpButtonPressed(it: View){
@@ -29,6 +51,7 @@ class SinglePlayerActivity : Activity() {
                 avd.start()
             }
             btn_skill_time.id->{ //Zaman doldurma joker
+                pb_time.progress = 0f
                 val avd: AnimatedVectorDrawable = getDrawable(R.drawable.avd_skill_time_cancel) as AnimatedVectorDrawable
                 btn_skill_time.setImageDrawable(avd)
                 btn_skill_time.isClickable = false
@@ -43,27 +66,24 @@ class SinglePlayerActivity : Activity() {
                 avd.start()
             }
             btn_answer1.id->{ //1.Cevap buttonu
-                if(skillUsed)
-                    refreshSkill()
+                refreshAll()
             }
             btn_answer2.id->{ //2.Cevap buttonu
-                if(skillUsed)
-                    refreshSkill()
+                refreshAll()
             }
             btn_answer3.id->{ //3.Cevap buttonu
-                if(skillUsed)
-                    refreshSkill()
+                refreshAll()
             }
             btn_answer4.id->{ //4.Cevap buttonu
-                if(skillUsed)
-                    refreshSkill()
+                refreshAll()
             }
 
         }
     }
 
-    fun refreshSkill(){
-        if (!btn_skill_half.isClickable) {
+    fun refreshAll(){
+        if(skillUsed){
+            if (!btn_skill_half.isClickable) {
                 btn_skill_half.isClickable = true
                 val avd: AnimatedVectorDrawable = getDrawable(R.drawable.avd_skill_half_open) as AnimatedVectorDrawable
                 btn_skill_half.setImageDrawable(avd)
@@ -82,5 +102,7 @@ class SinglePlayerActivity : Activity() {
                 avd.start()
             }
             skillUsed = false
+        }
+        pb_time.progress = 0F
     }
 }

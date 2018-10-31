@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_main_toolbar_height">210dp</dimen>
+    <dimen name="activity_main_iv_coin_size">20dp</dimen>
+    <dimen name="activity_main_tv_margin_size">6dp</dimen>
+    <dimen name="activity_main_text_size">14sp</dimen>
+    <dimen name="activity_main_user_photo_size">150dp</dimen>
+    <dimen name="activity_main_button_height">52dp</dimen>
+    <dimen name="activity_main_button_width">245dp</dimen>
+    <dimen name="activity_main_button_margin">25dp</dimen>
+
+    <dimen name="activity_single_player_progressbar_height">22.5dp</dimen>
+    <dimen name="activity_single_player_progressbar_margin">13.5dp</dimen>
+    <dimen name="activity_single_player_progressbar_margin_top">36dp</dimen>
+    <dimen name="activity_single_player_iv_height">202.5dp</dimen>
+    <dimen name="activity_single_player_iv_width">270dp</dimen>
+    <dimen name="activity_single_player_iv_margin_top">21dp</dimen>
+    <dimen name="activity_single_player_button_margin_top">11.25dp</dimen>
+    <dimen name="activity_single_player_button_height">50.625dp</dimen>
+    <dimen name="activity_single_player_button_width">247.5dp</dimen>
+    <dimen name="activity_single_player_skill_button_size">55dp</dimen>
+    <dimen name="activity_single_player_skill_button_margin">16.875dp</dimen>
+</resources>

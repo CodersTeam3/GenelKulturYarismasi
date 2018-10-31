@@ -1,6 +1,6 @@
 package com.app.codersteam.genelkulturyarismasi;
 
-public class    RoomAdress {
+public class RoomAdress {
     private String userid;
     private String roomid;
     public RoomAdress(){

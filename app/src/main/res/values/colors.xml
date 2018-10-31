@@ -9,4 +9,5 @@
     <color name="primaryTextColor">#ff9d00</color>
     <color name="buttonColor">#eba514</color>
     <color name="secondaryTextColor">#000000</color>
+    <color name="transparentColor">#40ffffff</color>
 </resources>

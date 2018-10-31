@@ -1,0 +1,81 @@
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:name="visibilitystrike"
+            android:width="24dp"
+            android:height="24dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+            <path
+                android:name="strike_thru_path"
+                android:pathData="M 2 4.27 L 3.27 3 L 3.27 3 L 2 4.27 Z"
+                android:fillColor="#ff000000"
+                android:strokeWidth="1"/>
+            <clip-path
+                android:name="strike_thru_mask"
+                android:pathData="M 0 0 L 24 0 L 24 24 L 0 24 L 0 0 Z M 4.54 1.73 L 3.27 3 L 3.27 3 L 4.54 1.73 Z"/>
+            <path
+                android:name="path"
+                android:pathData="M 16 4.5 C 14.012 4.5 12.103 5.291 10.697 6.697 C 9.291 8.103 8.5 10.012 8.5 12 C 8.5 13.988 9.291 15.897 10.697 17.303 C 12.103 18.709 14.012 19.5 16 19.5 C 17.988 19.5 19.897 18.709 21.303 17.303 C 22.709 15.897 23.5 13.988 23.5 12 C 23.5 10.012 22.709 8.103 21.303 6.697 C 19.897 5.291 17.988 4.5 16 4.5 Z"
+                android:strokeColor="#000000"
+                android:strokeWidth="0.35"
+                android:strokeMiterLimit="10"/>
+            <path
+                android:name="path_1"
+                android:pathData="M 15.9 12 L 15.9 7.7"
+                android:strokeColor="#000000"
+                android:strokeWidth="0.4"
+                android:strokeMiterLimit="10"/>
+            <path
+                android:name="path_2"
+                android:pathData="M 15.7 12 L 21.6 12"
+                android:strokeColor="#000000"
+                android:strokeWidth="0.35"
+                android:strokeMiterLimit="10"/>
+            <path
+                android:name="path_3"
+                android:pathData="M 4 9 L 4 15 M 1 12 L 7 12"
+                android:strokeColor="#000000"
+                android:strokeWidth="1"
+                android:strokeMiterLimit="10"/>
+        </vector>
+    </aapt:attr>
+    <target android:name="strike_thru_path">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="pathData"
+                android:startOffset="268"
+                android:duration="1271"
+                android:valueFrom="M 2 4.27 L 3.27 3 L 3.27 3 L 2 4.27 Z"
+                android:valueTo="M 19.73 22 L 21 20.73 L 3.27 3 L 2 4.27 Z"
+                android:valueType="pathType"
+                android:interpolator="@android:interpolator/fast_out_slow_in"/>
+        </aapt:attr>
+    </target>
+    <target android:name="strike_thru_mask">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="pathData"
+                android:startOffset="268"
+                android:duration="1271"
+                android:valueFrom="M 0 0 L 24 0 L 24 24 L 0 24 L 0 0 Z M 4.54 1.73 L 3.27 3 L 3.27 3 L 4.54 1.73 Z"
+                android:valueTo="M 0 0 L 24 0 L 24 24 L 0 24 L 0 0 Z M 4.54 1.73 L 3.27 3 L 21 20.73 L 22.27 19.46 Z"
+                android:valueType="pathType"
+                android:interpolator="@android:interpolator/fast_out_slow_in"/>
+        </aapt:attr>
+    </target>
+    <target android:name="visibilitystrike">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="alpha"
+                android:startOffset="268"
+                android:duration="1271"
+                android:valueFrom="1"
+                android:valueTo="0.333"
+                android:valueType="floatType"
+                android:interpolator="@android:interpolator/fast_out_slow_in"/>
+        </aapt:attr>
+    </target>
+</animated-vector>
