@@ -6,24 +6,111 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SinglePlayerActivity"
-    android:background="@drawable/single_player_activity_background">
+    android:background="@drawable/activity_single_player_background">
 
+    <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+        android:id="@+id/roundCornerProgressBar"
+        android:layout_width="match_parent"
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/imageView"
-        android:layout_width="250dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="64dp"
-        app:cardCornerRadius="20dp"
+        android:layout_height="@dimen/activity_single_player_progressbar_height"
+        android:layout_marginEnd="@dimen/activity_single_player_progressbar_margin"
+        android:layout_marginStart="@dimen/activity_single_player_progressbar_margin"
+        android:layout_marginTop="@dimen/activity_single_player_progressbar_margin_top"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:contentDescription="hahaha işte bu"/>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/activity_single_player_iv_width"
+        android:layout_height="@dimen/activity_single_player_iv_height"
+        android:layout_marginTop="@dimen/activity_single_player_iv_margin_top"
+        android:contentDescription="@string/single_player_activity_question_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roundCornerProgressBar" />
 
-    </android.support.v7.widget.CardView>
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/activity_single_player_iv_margin_top"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <Button
+            android:id="@+id/btn_answer1"
+            android:layout_width="@dimen/activity_single_player_button_width"
+            android:layout_height="@dimen/activity_single_player_button_height"
+            android:onClick="activitySpButtonPressed" />
+
+        <Button
+            android:id="@+id/btn_answer2"
+            android:layout_width="@dimen/activity_single_player_button_width"
+            android:layout_height="@dimen/activity_single_player_button_height"
+            android:layout_marginTop="@dimen/activity_single_player_button_margin_top"
+            android:onClick="activitySpButtonPressed" />
+
+        <Button
+            android:id="@+id/btn_answer3"
+            android:layout_width="@dimen/activity_single_player_button_width"
+            android:layout_height="@dimen/activity_single_player_button_height"
+            android:layout_marginTop="@dimen/activity_single_player_button_margin_top"
+            android:onClick="activitySpButtonPressed" />
+
+        <Button
+            android:id="@+id/btn_answer4"
+            android:layout_width="@dimen/activity_single_player_button_width"
+            android:layout_height="@dimen/activity_single_player_button_height"
+            android:layout_marginTop="@dimen/activity_single_player_button_margin_top"
+            android:onClick="activitySpButtonPressed" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="@dimen/activity_single_player_iv_margin_top"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <ImageButton
+            android:id="@+id/btn_skill_half"
+            android:layout_width="@dimen/activity_single_player_skill_button_size"
+            android:layout_height="@dimen/activity_single_player_skill_button_size"
+            android:contentDescription="@string/single_player_activity_skill_half_desc"
+            android:src="@drawable/avd_skill_half_cancel"
+            android:layout_marginEnd="@dimen/activity_single_player_skill_button_margin"
+            android:onClick="activitySpButtonPressed"/>
+
+        <ImageButton
+            android:id="@+id/btn_skill_time"
+            android:layout_width="@dimen/activity_single_player_skill_button_size"
+            android:layout_height="@dimen/activity_single_player_skill_button_size"
+            android:layout_marginStart="@dimen/activity_single_player_skill_button_margin"
+            android:src="@drawable/avd_skill_time_cancel"
+            android:layout_marginEnd="@dimen/activity_single_player_skill_button_margin"
+            android:contentDescription="@string/single_player_activity_skill_time_desc"
+            android:onClick="activitySpButtonPressed"/>
+
+        <ImageButton
+            android:id="@+id/btn_skill_user"
+            android:layout_width="@dimen/activity_single_player_skill_button_size"
+            android:layout_height="@dimen/activity_single_player_skill_button_size"
+            android:src="@drawable/avd_skill_user_cancel"
+            android:contentDescription="@string/single_player_activity_skill_user_desc"
+            android:layout_marginStart="@dimen/activity_single_player_skill_button_margin"
+            android:onClick="activitySpButtonPressed"/>
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
