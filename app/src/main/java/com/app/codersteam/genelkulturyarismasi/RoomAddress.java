@@ -1,15 +1,12 @@
 package com.app.codersteam.genelkulturyarismasi;
 
-public class RoomAdress {
+public class RoomAddress {
     private String userid;
     private String roomid;
-    public RoomAdress(){
 
-    }
-    public RoomAdress(String userid,String roomid){
-        this.userid=userid;
-        this.roomid=roomid;
-
+    public RoomAddress(String userid, String roomid) {
+        this.userid = userid;
+        this.roomid = roomid;
     }
 
     public String getUserid() {
