@@ -30,8 +30,11 @@ import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class SignUpActivity extends Activity {
     private FirebaseAuth mAuth;
@@ -130,12 +133,35 @@ public class SignUpActivity extends Activity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithCredential:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            UserProperties userProperties = new UserProperties(
+                            final FirebaseUser user = mAuth.getCurrentUser();
+                            final UserProperties userProperties = new UserProperties(
                                     mAuth.getCurrentUser().getDisplayName(),mAuth.getCurrentUser().getEmail(),mAuth.getCurrentUser().getUid()
                                     ,mAuth.getCurrentUser().getPhotoUrl().toString());
-                            myRef.child(mAuth.getCurrentUser().getUid()).child(getResources().getString(R.string.userproperties)).setValue(userProperties);
-                            updateUI(user);
+                            myRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(DataSnapshot dataSnapshot) {
+                                    if(!dataSnapshot.hasChild(mAuth.getCurrentUser().getUid())){
+                                        myRef.child(mAuth.getCurrentUser().getUid()).child(getResources().getString(R.string.userproperties)).setValue(userProperties).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                            @Override
+                                            public void onComplete(@NonNull Task<Void> task) {
+                                                myRef.child(mAuth.getCurrentUser().getUid()).child("coin").child("value").setValue(0).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                    @Override
+                                                    public void onComplete(@NonNull Task<Void> task) {
+                                                        Log.d("Google","Oturum açıldı");
+                                                        updateUI(user);
+                                                    }
+                                                });
+
+                                            }
+                                        });
+
+                                    }
+                                }
+                                @Override
+                                public void onCancelled(DatabaseError databaseError) {
+
+                                }
+                            });
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
@@ -158,14 +184,35 @@ public class SignUpActivity extends Activity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithCredential:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            UserProperties userProperties = new UserProperties(
+                            final FirebaseUser user = mAuth.getCurrentUser();
+                            final UserProperties userProperties = new UserProperties(
                                     mAuth.getCurrentUser().getDisplayName(),mAuth.getCurrentUser().getEmail(),mAuth.getCurrentUser().getUid()
                                     ,mAuth.getCurrentUser().getPhotoUrl().toString());
-                            FirebaseDatabase database = FirebaseDatabase.getInstance();
-                            DatabaseReference myRef = database.getReference("Users");
-                            myRef.child(user.getUid()).child(getResources().getString(R.string.userproperties)).setValue(userProperties);
-                            updateUI(user);
+                            myRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(DataSnapshot dataSnapshot) {
+                                    if(!dataSnapshot.hasChild(mAuth.getCurrentUser().getUid())){
+                                        myRef.child(mAuth.getCurrentUser().getUid()).child(getResources().getString(R.string.userproperties)).setValue(userProperties).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                            @Override
+                                            public void onComplete(@NonNull Task<Void> task) {
+                                                myRef.child(mAuth.getCurrentUser().getUid()).child("coin").child("value").setValue(0).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                    @Override
+                                                    public void onComplete(@NonNull Task<Void> task) {
+                                                        Log.d("Google","Oturum açıldı");
+                                                        updateUI(user);
+                                                    }
+                                                });
+
+                                            }
+                                        });
+
+                                    }
+                                }
+                                @Override
+                                public void onCancelled(DatabaseError databaseError) {
+
+                                }
+                            });
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithCredential:failure", task.getException());

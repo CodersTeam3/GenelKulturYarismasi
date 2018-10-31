@@ -56,7 +56,9 @@ public class DatabaseControl {
      * @return
      */
     public UserProperties getUserProperties(DataSnapshot dataSnapshot){
-        return dataSnapshot.getValue(UserProperties.class);
+        UserProperties userProperties;
+        userProperties = dataSnapshot.child("properties").getValue(UserProperties.class);
+        return userProperties;
     }
     /**
      * This method return the Value of dataSnapshot

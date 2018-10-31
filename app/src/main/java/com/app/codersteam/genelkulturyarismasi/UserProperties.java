@@ -5,9 +5,11 @@ public class UserProperties {
     private String personEmail;
     private String personId ;
     private String personPhoto;
+
     public UserProperties() {
 
     }
+
 
     public UserProperties(String personName, String personEmail, String personId, String personPhoto) {
         this.personName = personName;
